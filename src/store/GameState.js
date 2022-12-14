@@ -2,18 +2,13 @@ import {reactive} from 'vue'
 
 export const GameState = reactive({
   resources: {
-    resourceNumber: {
-      value: 0
-    },
+    number: 0,
     resourceMap: {},
     getAllResources() {
       return this.resourceMap
     },
     getResource(key) {
       return this.resourceMap.get(key);
-    },
-    getResourceNumber() {
-      return this.resourceNumber;
     },
     addResource({key, amount}) {
       let resource = this.resourceMap[key];
@@ -22,15 +17,58 @@ export const GameState = reactive({
         resource = this.resourceMap[key];
       }
       resource.addToAmount(amount);
-      console.log((resource.amount * resource.value));
-      this.adjustResourceValue(resource.amount * resource.value)
-      console.log(this.resourceNumber.value);
+      this.adjustNumber(resource.amount * resource.value)
     },
-    adjustResourceValue(delta) {
-      console.log('delta' + delta);
-      this.resourceNumber.value += delta;
-      console.log('resourceNumber ' + this.resourceNumber);
+    adjustNumber(delta) {
+      console.log('delta ' + delta);
+      this.number += delta;
+      console.log('resourceNumber ' + this.number);
     }
+  },
+  population: {
+    number: 1,
+    adjustNumber(delta) {
+      console.log('delta ' + delta);
+      this.number += delta;
+      console.log('resourceNumber ' + this.number);
+    }
+
+  },
+  actions:
+    {
+      active: 'scavenge',
+      list: {
+        scavenge: {
+          buttonText: "scavenge",
+          onPerform: () => {
+            console.log("scavenged");
+            GameState.resources.addResource({key: 'berries', amount: 5});
+          }
+        },
+        hunt: {
+          buttonText: "hunt",
+          onPerform: () => {
+            console.log("hunt");
+            GameState.resources.addResource({key: 'meat', amount: 5});
+          }
+        },
+        chop: {
+          buttonText: "chop",
+          onPerform: () => {
+            console.log("chop");
+            GameState.resources.addResource({key: 'wood', amount: 5});
+          }
+        }
+      },
+      setActive(key) {
+        this.active = key;
+      },
+      getActive() {
+        return this.list[this.active];
+      },
+    },
+  gameHour() {
+    this.actions.getActive().onPerform();
   }
 });
 

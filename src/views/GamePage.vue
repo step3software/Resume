@@ -4,6 +4,7 @@
     <Numbers class="pane border"/>
     <Actions ref="actions" class="pane border"/>
     <Resources class="pane border"/>
+    <Population class="pane border"/>
   </div>
 </template>
 <script>
@@ -11,6 +12,8 @@
 import ActionsPane from "@/views/ActionsPane";
 import ResourcesPane from "@/views/ResourcesPane";
 import NumbersPane from "@/views/NumbersPane";
+import {GameState} from "@/store/GameState";
+import PopulationPane from "@/views/PopulationPane";
 
 const GAME_HOUR_INTERVAL = 600;
 
@@ -28,7 +31,8 @@ export default {
   components: {
     Actions: ActionsPane,
     Numbers: NumbersPane,
-    Resources: ResourcesPane
+    Resources: ResourcesPane,
+    Population: PopulationPane,
   },
   computed: {},
   methods: {
@@ -37,7 +41,7 @@ export default {
       let unprocessedTime = timeElapsed;
 
       while (unprocessedTime > GAME_HOUR_INTERVAL) {
-        this.gameHour();
+        GameState.gameHour();
         this.hoursPassed += 1;
         this.referenceTime += GAME_HOUR_INTERVAL;
         unprocessedTime -= GAME_HOUR_INTERVAL;

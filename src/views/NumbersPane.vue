@@ -1,7 +1,7 @@
 <template>
   <div class="grid container actions border">
     <div class="row">
-      Resource number: {{ resourceNumber.value }}
+      Resource number: {{ resources.number }}
     </div>
   </div>
 </template>
@@ -13,8 +13,7 @@ export default {
   name: "NumbersPane",
   data() {
     return {
-      resourceNumber: GameState.resources.resourceNumber,
-      allResources: GameState.resources.resourceMap,
+      resources: GameState.resources,
     };
   },
   mounted() {

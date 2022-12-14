@@ -1,22 +1,19 @@
 <template>
-  <div class="grid container actions border border-slate-100">
-    <div v-for="(resource, name) in resources" :key="name" class="row">
-      {{ name }} : {{ resource.amount }}
-    </div>
-  </div>
+  <div></div>
 </template>
 <script>
 
 import {GameState} from "@/store/GameState";
 
 export default {
-  name: "ResourcesPane",
+  name: "PopulationPane",
   data() {
     return {
-      resources: GameState.resources.resourceMap,
+      population: GameState.population,
     };
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
     loadStatus() {
     },
