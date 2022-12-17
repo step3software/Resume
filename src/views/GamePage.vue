@@ -47,9 +47,6 @@ export default {
         unprocessedTime -= GAME_HOUR_INTERVAL;
       }
       requestAnimationFrame(this.gameLoop);
-    },
-    gameHour() {
-      this.$refs.actions?.gameHour();
     }
   }
 };

@@ -1,5 +1,5 @@
 <template>
-  <div class="grid container actions border border-slate-100">
+  <div class="grid container border border-slate-100">
     <div v-for="(resource, name) in resources" :key="name" class="row">
       {{ name }} : {{ resource.amount }}
     </div>
@@ -13,15 +13,8 @@ export default {
   name: "ResourcesPane",
   data() {
     return {
-      resources: GameState.resources.resourceMap,
+      resources: GameState.resources.map,
     };
-  },
-  mounted() {},
-  methods: {
-    loadStatus() {
-    },
-    setAction() {
-    }
   }
 };
 </script>
@@ -32,12 +25,7 @@ a {
   cursor: pointer;
 }
 
-.action {
-  padding-x: 40px;
-  padding-y: 4px;
-}
-
-.actions {
+.container {
   justify-items: center;
 }
 </style>

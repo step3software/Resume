@@ -15,15 +15,6 @@ export default {
     return {
       resources: GameState.resources,
     };
-  },
-  mounted() {
-    this.loadStatus();
-  },
-  methods: {
-    loadStatus() {
-    },
-    setAction() {
-    }
   }
 };
 </script>

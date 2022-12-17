@@ -28,13 +28,4 @@ a {
   text-decoration: underline;
   cursor: pointer;
 }
-
-.action {
-  padding-x: 40px;
-  padding-y: 4px;
-}
-
-.actions {
-  justify-items: center;
-}
 </style>

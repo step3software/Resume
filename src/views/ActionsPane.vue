@@ -1,8 +1,8 @@
 <template>
-  <div class="grid container actions">
-    <div v-for="(action, name) in actions.list" :key="name"
-         :class="{active: name === actions.active}"
-         class="row action border clickable"
+  <div class="grid container">
+    <div v-for="(action, name) in actions.map" :key="name"
+         :class="{active : name === actions.active}"
+         class="row border clickable"
          @click="setAction(name)">
       {{ action.buttonText }}
     </div>
@@ -16,7 +16,6 @@ export default {
   data() {
     return {
       actions: GameState.actions,
-      active: '',
       actionFrame: '',
     }
   },
@@ -28,7 +27,7 @@ export default {
     },
     setAction(actionKey) {
       console.log('active action set to ' + actionKey)
-      GameState.actions.setActive(actionKey);
+      this.actions.setActive(actionKey);
     }
   }
 }
@@ -40,15 +39,15 @@ a {
   cursor: pointer;
 }
 
-.action {
+.row {
   margin-bottom: 1rem;
 }
 
-.actions {
+.container {
   justify-items: center;
 }
 
 .active {
-  background-color: var(--color-2);
+  background-color: var(--color-3);
 }
 </style>

@@ -3,18 +3,18 @@ import {reactive} from 'vue'
 export const GameState = reactive({
   resources: {
     number: 0,
-    resourceMap: {},
-    getAllResources() {
-      return this.resourceMap
+    map: {},
+    getMap() {
+      return this.map
     },
     getResource(key) {
-      return this.resourceMap.get(key);
+      return this.map.get(key);
     },
     addResource({key, amount}) {
-      let resource = this.resourceMap[key];
+      let resource = this.map[key];
       if (!resource) {
-        this.resourceMap[key] = new ResourceEntry();
-        resource = this.resourceMap[key];
+        this.map[key] = new ResourceEntry();
+        resource = this.map[key];
       }
       resource.addToAmount(amount);
       this.adjustNumber(resource.amount * resource.value)
@@ -37,7 +37,7 @@ export const GameState = reactive({
   actions:
     {
       active: 'scavenge',
-      list: {
+      map: {
         scavenge: {
           buttonText: "scavenge",
           onPerform: () => {
@@ -63,12 +63,12 @@ export const GameState = reactive({
       setActive(key) {
         this.active = key;
       },
-      getActive() {
-        return this.list[this.active];
-      },
+      performActiveAction() {
+        this.map[this.active].onPerform();
+      }
     },
   gameHour() {
-    this.actions.getActive().onPerform();
+    this.actions.performActiveAction();
   }
 });
 
