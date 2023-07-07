@@ -1,6 +1,21 @@
 import {reactive} from 'vue'
 
 export const GameState = reactive({
+  player: {
+    inventory: [{
+      //tools and resources?
+    }],
+    skills: [{
+
+    }],
+    location: {
+
+    },
+    properties: [{
+
+    }]
+
+  },
   resources: {
     number: 0,
     map: {},
@@ -24,15 +39,6 @@ export const GameState = reactive({
       this.number += delta;
       console.log('resourceNumber ' + this.number);
     }
-  },
-  population: {
-    number: 1,
-    adjustNumber(delta) {
-      console.log('delta ' + delta);
-      this.number += delta;
-      console.log('resourceNumber ' + this.number);
-    }
-
   },
   actions:
     {

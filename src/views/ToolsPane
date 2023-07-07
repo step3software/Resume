@@ -1,0 +1,39 @@
+<template>
+  <div>
+    <h2>Tool Manager</h2>
+    <div v-for="(tool, index) in tools" :key="index">
+      <h3>{{ tool.name }}</h3>
+      <p>Danger level: {{ tool.dangerLevel }}</p>
+      <p>Current level: {{ tool.level }}</p>
+      <button @click="upgradeTool(index)">Upgrade Tool</button>
+    </div>
+  </div>
+</template>
+
+<script>
+import toolData from "@/assets/tools.json";
+
+export default {
+  data() {
+    return {
+      tools: toolData.tools,
+    };
+  },
+  methods: {
+    upgradeTool(index) {
+      const tool = this.tools[index];
+      const upgradeCost = tool.cost.reduce((totalCost, resource) => {
+        const resourceCost = this.resources[resource.id] * resource.amount;
+        return totalCost + resourceCost;
+      }, 0);
+
+      if (upgradeCost <= this.availableResources) {
+        this.availableResources -= upgradeCost;
+        tool.level++;
+      } else {
+        alert("You don't have enough resources to upgrade this tool!");
+      }
+    },
+  },
+};
+</script>
