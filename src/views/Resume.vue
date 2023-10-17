@@ -10,40 +10,58 @@
     <div><span class="category">Languages: </span> Java, JavaScript, TypeScript, C#</div>
     <div><span class="category">Frameworks: </span> Angular.js, Vue.js, Spring (MVC, Boot, Batch, Test)</div>
     <div><span class="category">Database: </span> PostgreSQL, Oracle SQL, Liquibase, ElasticSearch</div>
-    <div><span class="category">Tools: </span> IntelliJ, Jira, Git, npm</div>
+    <div><span class="category">Tools: </span> IntelliJ, Jira, Git, npm, Excel</div>
     <h1>Employment</h1>
     <div class="section">
       <div class="headline">
         <span class="company">Founder at Step 3 Software</span>
-        <span class="time">July 2020 – present</span>
+        <span class="time">July 2020 – August 2021</span>
       </div>
     </div>
     <div class="client section">
       <div class="headline">
         <span class="company">Client: Virtual Behavioral Skills Training</span>
-        <span class="time">July 2020 – present</span>
       </div>
       <div class="indent">
-        <div class="technologies">Vue.js, Babel, nodejs, SQLite</div>
+        <div class="technologies">Vue.js, Babel, node.js, SQLite</div>
         <div class="responsibility">Solely responsible for entire SDLC</div>
       </div>
     </div>
     <div class="section">
       <div class="headline">
-        <span class="company">Technical Architect at Jonah Group (now 3Pillar Global)</span>
-        <span class="time">July 2012 - March 2020, July 2021 - present</span>
+        <span class="company">Product Development Manager at Jonah Group (now 3Pillar Global)</span>
+        <span class="time">July 2012 - present</span>
+      </div>
+      <div class="indent">
+        <div class="responsibility">Interviewed and evaluated developers of all levels</div>
+        <div class="responsibility">Continuously grew into progressive responsibilities, seeking out new challenges</div>
       </div>
     </div>
     <div class="client section">
       <div class="headline">
-        <span class="company">Lead Developer at Client: Farm Credit Canada</span>
-        <span class="time">July 2021 – present</span>
+        <span class="company">Product Development Manager at Client: Dye & Durham</span>
+        <span class="time">August 2023 – present</span>
+      </div>
+      <div class="indent">
+        <div class="technologies">Flutter, C#, AWS, Jira, Excel</div>
+        <div class="responsibility">Wore many hats as required to keep development moving</div>
+        <div class="responsibility">Directly managed 7 team-members</div>
+        <div class="responsibility">Analysed desired business outcomes to write concrete user stories</div>
+        <div class="responsibility">Produced development timeline estimates and found solutions to meet stakeholder needs</div>
+        <div class="responsibility">Reported to stakeholder on development velocity</div>
+        <div class="responsibility">Prioritized development work according to dependencies on/of other teams</div>
+        <div class="responsibility">Facilitated scrum ceremonies</div>
+      </div>
+    </div>
+    <div class="client section">
+      <div class="headline">
+        <span class="company">Tech Lead at Client: Farm Credit Canada</span>
+        <span class="time">July 2021 – August 2023</span>
       </div>
       <div class="indent">
         <div class="technologies">SAFe, Angular 14, TypeScript, Tailwind, Java 17, Spring Boot and Batch, AWS, PostgreSQL, Liquibase</div>
-        <div class="responsibility">Lead a pioneer team of four which grew to a 2m+ account over 2 years</div>
+        <div class="responsibility">Lead a pioneer team of 4 which grew to a 2m+ account over 2 years</div>
         <div class="responsibility">Onboarded and mentored 10+ developers and 3 dev leads </div>
-        <div class="responsibility">Interviewed and evaluated developers of all levels</div>
         <div class="responsibility">Introduced time-sheet reconciliation process to get invoice error rate to near 0</div>
       </div>
     </div>
@@ -54,6 +72,8 @@
       </div>
       <div class="indent">
         <div class="technologies">Angular.js, TypeScript, Java 8, Spring, Hibernate, DB2, Gulp, TestNG, Jasmine, Bamboo, Git</div>
+        <div class="responsibility">Drove analysis and development across various phases of a large legacy migration project</div>
+        <div class="responsibility">Owned technical side of UX standards for several teams, including componentization</div>
       </div>
     </div>
     <div class="client section">
@@ -63,6 +83,8 @@
       </div>
       <div class="indent">
         <div class="technologies">Oracle SQL, Harvest SCM</div>
+        <div class="responsibility">Analyzed performance of various queries and tables</div>
+        <div class="responsibility">Proposed and developed solutions accordingly</div>
       </div>
     </div>
     <div class="client section">
@@ -72,6 +94,8 @@
       </div>
       <div class="indent">
         <div class="technologies">C#, .NET, Silverlight, Telerik, ReSharper, IIS, MSBuild, SQL Server, SVN</div>
+        <div class="responsibility">Worked closely with an individual stakeholder to produce a POC Excel plugin</div>
+        <div class="responsibility">Collaborated with another consulting org to implement reporting tools using their proprietary framework</div>
       </div>
     </div>
     <div class="client section">
@@ -81,6 +105,7 @@
       </div>
       <div class="indent">
         <div class="technologies">Java 6, J2EE, Spring, JavaScript, JSP, VB6, Oracle SQL, SVN</div>
+        <div class="responsibility">Migrated a complex benefits management UI using pure JS</div>
       </div>
     </div>
     <div class="section">
@@ -88,11 +113,18 @@
         <span class="company">Interning Developer at Diamond Computing Company</span>
         <span class="time">May 2012 - August 2012</span>
       </div>
+      <div class="indent">
+        <div class="technologies">VB6</div>
+        <div class="responsibility">Wrote a script to send faxes or emails based on file changes</div>
+      </div>
     </div>
     <div class="section">
       <div class="headline">
         <span class="company">Assistant Lecturer at Hong Kong University S.P.A.C.E. Global College</span>
         <span class="time">2009 – 2011</span>
+      </div>
+      <div class="indent">
+        <div class="responsibility">Taught English</div>
       </div>
     </div>
     <h1>Education</h1>
@@ -102,7 +134,7 @@
     <div class="indent">B.A. in Linguistics, Classics</div>
     <h1>Personal</h1>
     <div>Dual-citizen of US and Canada</div>
-    <div>Fluent in English, German, Conversational in Chinese, French, Spanish</div>
+    <div>Fluent in English, German, Conversational in Chinese, French, Spanish, Basic Gonja</div>
     <div>Summer 2015: Hiked the Appalachian Trail</div>
   </div>
 </template>
